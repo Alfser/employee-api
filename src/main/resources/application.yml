@@ -28,8 +28,8 @@ spring:
 
 
     flyway:
-        locations: filesystem:db/migration
         enabled: true
+        locations: filesystem:db/migration
         baseline-on-migrate: true 
 springdoc:
     swagger-ui:
