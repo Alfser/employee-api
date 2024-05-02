@@ -26,7 +26,8 @@ spring:
             '[hibernate.format_sql]' : true
             '[hibernate.generate_statistics]' : true
 
-
+    rabbitmq:
+        addresses: amqp://${MQ_USER}:${MQ_PASSWORD}@${MQ_HOST}:${MQ_PORT}
     flyway:
         enabled: true
         locations: filesystem:db/migration
