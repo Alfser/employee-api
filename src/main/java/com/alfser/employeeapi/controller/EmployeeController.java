@@ -19,12 +19,12 @@ import lombok.RequiredArgsConstructor;
 public class EmployeeController {
     private final EmployeeService employeeService;
 
-    @GetMapping(value = "/")
+    @GetMapping
     public List<Employee> get(){
         return employeeService.findAll();
     }
 
-    @PostMapping(value = "/")
+    @PostMapping
     public Employee save(@RequestBody(required = true) Employee body){
         return employeeService.save(body);
     }
