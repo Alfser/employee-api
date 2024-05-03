@@ -14,7 +14,12 @@ public class EmployeeApiApplication {
 	static final String topicExchangeName = "";
 
 	@Bean
-	Queue queue() {
+	Queue queueBadge() {
+		return new Queue(BrokerMQConstraints.BADGE_QUEUE, false);
+	}
+
+	@Bean
+	Queue queueEmployee() {
 		return new Queue(BrokerMQConstraints.EMPLOYEE_QUEUE, false);
 	}
 
